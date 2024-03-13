@@ -1,0 +1,642 @@
+Program.Sub.ScreenSU.Start
+
+Gui.Form1..Create
+Gui.Form1..Caption("NAFTA Certificate Maintenance for Product Line")
+Gui.Form1..Size(7410,3060)
+Gui.Form1..Position(0,0)
+Gui.Form1..AlwaysOnTop(False)
+Gui.Form1..FontName("Arial")
+Gui.Form1..FontSize(8)
+Gui.Form1..ForeColor(0)
+Gui.Form1..Backcolor(-2147483633)
+Gui.Form1..ControlBox(True)
+Gui.Form1..MaxButton(True)
+Gui.Form1..MinButton(True)
+Gui.Form1..MousePointer(0)
+Gui.Form1..Moveable(True)
+Gui.Form1..Sizeable(True)
+Gui.Form1..ShowInTaskBar(True)
+Gui.Form1..TitleBar(True)
+
+Gui.Form1..Event(unload,form1_unload)
+
+Gui.Form1.txtPL.Create(textbox)
+Gui.Form1.txtPL.Text("")
+Gui.Form1.txtPL.Visible(True)
+Gui.Form1.txtPL.Size(540,300)
+Gui.Form1.txtPL.Zorder(0)
+Gui.Form1.txtPL.Position(65,200)
+Gui.Form1.txtPL.Enabled(False)
+Gui.Form1.txtPL.Alignment(0)
+Gui.Form1.txtPL.FontName("Arial")
+Gui.Form1.txtPL.FontSize(8)
+Gui.Form1.txtPL.Backcolor(-2147483643)
+Gui.Form1.txtPL.BorderStyle(1)
+Gui.Form1.txtPL.MaxLength(2)
+Gui.Form1.txtPL.TabStop(True)
+Gui.Form1.txtPL.TabIndex(0)
+Gui.Form1.txtPL.Tooltip("")
+Gui.Form1.txtPL.ControlGroup(0)
+Gui.Form1.txtPL.DefaultValue("")
+
+
+Gui.Form1.lbl1.Create(label)
+Gui.Form1.lbl1.Caption("PL")
+Gui.Form1.lbl1.Visible(True)
+Gui.Form1.lbl1.Size(645,255)
+Gui.Form1.lbl1.Zorder(0)
+Gui.Form1.lbl1.Position(65,20)
+Gui.Form1.lbl1.Enabled(True)
+Gui.Form1.lbl1.Alignment(0)
+Gui.Form1.lbl1.FontName("Arial")
+Gui.Form1.lbl1.FontSize(8)
+Gui.Form1.lbl1.Backcolor(-2147483633)
+Gui.Form1.lbl1.BackStyle(0)
+Gui.Form1.lbl1.Tooltip("")
+Gui.Form1.lbl1.ControlGroup(0)
+Gui.Form1.lbl1.DefaultValue("")
+
+
+Gui.Form1.cmdPL.Create(button)
+Gui.Form1.cmdPL.Caption("^")
+Gui.Form1.cmdPL.Visible(True)
+Gui.Form1.cmdPL.Size(420,375)
+Gui.Form1.cmdPL.Zorder(0)
+Gui.Form1.cmdPL.Position(625,140)
+Gui.Form1.cmdPL.Enabled(True)
+Gui.Form1.cmdPL.FontName("Arial")
+Gui.Form1.cmdPL.FontSize(8)
+Gui.Form1.cmdPL.TabStop(True)
+Gui.Form1.cmdPL.TabIndex(2)
+Gui.Form1.cmdPL.Tooltip("")
+Gui.Form1.cmdPL.ControlGroup(0)
+Gui.Form1.cmdPL.DefaultValue("")
+
+Gui.Form1.cmdPL.Event(click,cmdpl_click)
+
+Gui.Form1.txtTC.Create(textbox)
+Gui.Form1.txtTC.Text("")
+Gui.Form1.txtTC.Visible(True)
+Gui.Form1.txtTC.Size(1215,300)
+Gui.Form1.txtTC.Zorder(0)
+Gui.Form1.txtTC.Position(1155,200)
+Gui.Form1.txtTC.Enabled(True)
+Gui.Form1.txtTC.Alignment(0)
+Gui.Form1.txtTC.FontName("Arial")
+Gui.Form1.txtTC.FontSize(8)
+Gui.Form1.txtTC.Backcolor(-2147483643)
+Gui.Form1.txtTC.BorderStyle(1)
+Gui.Form1.txtTC.MaxLength(7)
+Gui.Form1.txtTC.TabStop(True)
+Gui.Form1.txtTC.TabIndex(3)
+Gui.Form1.txtTC.Tooltip("")
+Gui.Form1.txtTC.ControlGroup(0)
+Gui.Form1.txtTC.DefaultValue("")
+
+
+Gui.Form1.lbl2.Create(label)
+Gui.Form1.lbl2.Caption("Tariff Code")
+Gui.Form1.lbl2.Visible(True)
+Gui.Form1.lbl2.Size(1080,255)
+Gui.Form1.lbl2.Zorder(0)
+Gui.Form1.lbl2.Position(1155,20)
+Gui.Form1.lbl2.Enabled(True)
+Gui.Form1.lbl2.Alignment(0)
+Gui.Form1.lbl2.FontName("Arial")
+Gui.Form1.lbl2.FontSize(8)
+Gui.Form1.lbl2.Backcolor(-2147483633)
+Gui.Form1.lbl2.BackStyle(0)
+Gui.Form1.lbl2.Tooltip("")
+Gui.Form1.lbl2.ControlGroup(0)
+Gui.Form1.lbl2.DefaultValue("")
+
+
+Gui.Form1.txtPrefCrit.Create(textbox)
+Gui.Form1.txtPrefCrit.Text("")
+Gui.Form1.txtPrefCrit.Visible(True)
+Gui.Form1.txtPrefCrit.Size(1500,300)
+Gui.Form1.txtPrefCrit.Zorder(0)
+Gui.Form1.txtPrefCrit.Position(2395,200)
+Gui.Form1.txtPrefCrit.Enabled(True)
+Gui.Form1.txtPrefCrit.Alignment(0)
+Gui.Form1.txtPrefCrit.FontName("Arial")
+Gui.Form1.txtPrefCrit.FontSize(8)
+Gui.Form1.txtPrefCrit.Backcolor(-2147483643)
+Gui.Form1.txtPrefCrit.BorderStyle(1)
+Gui.Form1.txtPrefCrit.MaxLength(7)
+Gui.Form1.txtPrefCrit.TabStop(True)
+Gui.Form1.txtPrefCrit.TabIndex(5)
+Gui.Form1.txtPrefCrit.Tooltip("")
+Gui.Form1.txtPrefCrit.ControlGroup(0)
+Gui.Form1.txtPrefCrit.DefaultValue("")
+
+
+Gui.Form1.lbl3.Create(label)
+Gui.Form1.lbl3.Caption("Preference Criterion")
+Gui.Form1.lbl3.Visible(True)
+Gui.Form1.lbl3.Size(1680,255)
+Gui.Form1.lbl3.Zorder(0)
+Gui.Form1.lbl3.Position(2395,20)
+Gui.Form1.lbl3.Enabled(True)
+Gui.Form1.lbl3.Alignment(0)
+Gui.Form1.lbl3.FontName("Arial")
+Gui.Form1.lbl3.FontSize(8)
+Gui.Form1.lbl3.Backcolor(-2147483633)
+Gui.Form1.lbl3.BackStyle(0)
+Gui.Form1.lbl3.Tooltip("")
+Gui.Form1.lbl3.ControlGroup(0)
+Gui.Form1.lbl3.DefaultValue("")
+
+
+Gui.Form1.txtProducer.Create(textbox)
+Gui.Form1.txtProducer.Text("")
+Gui.Form1.txtProducer.Visible(True)
+Gui.Form1.txtProducer.Size(1500,300)
+Gui.Form1.txtProducer.Zorder(0)
+Gui.Form1.txtProducer.Position(3935,200)
+Gui.Form1.txtProducer.Enabled(True)
+Gui.Form1.txtProducer.Alignment(0)
+Gui.Form1.txtProducer.FontName("Arial")
+Gui.Form1.txtProducer.FontSize(8)
+Gui.Form1.txtProducer.Backcolor(-2147483643)
+Gui.Form1.txtProducer.BorderStyle(1)
+Gui.Form1.txtProducer.MaxLength(8)
+Gui.Form1.txtProducer.TabStop(True)
+Gui.Form1.txtProducer.TabIndex(7)
+Gui.Form1.txtProducer.Tooltip("")
+Gui.Form1.txtProducer.ControlGroup(0)
+Gui.Form1.txtProducer.DefaultValue("")
+
+
+Gui.Form1.lbl4.Create(label)
+Gui.Form1.lbl4.Caption("Producer")
+Gui.Form1.lbl4.Visible(True)
+Gui.Form1.lbl4.Size(1230,255)
+Gui.Form1.lbl4.Zorder(0)
+Gui.Form1.lbl4.Position(3935,20)
+Gui.Form1.lbl4.Enabled(True)
+Gui.Form1.lbl4.Alignment(0)
+Gui.Form1.lbl4.FontName("Arial")
+Gui.Form1.lbl4.FontSize(8)
+Gui.Form1.lbl4.Backcolor(-2147483633)
+Gui.Form1.lbl4.BackStyle(0)
+Gui.Form1.lbl4.Tooltip("")
+Gui.Form1.lbl4.ControlGroup(0)
+Gui.Form1.lbl4.DefaultValue("")
+
+
+Gui.Form1.txtNetCost.Create(textbox)
+Gui.Form1.txtNetCost.Text("")
+Gui.Form1.txtNetCost.Visible(True)
+Gui.Form1.txtNetCost.Size(1590,300)
+Gui.Form1.txtNetCost.Zorder(0)
+Gui.Form1.txtNetCost.Position(5460,200)
+Gui.Form1.txtNetCost.Enabled(True)
+Gui.Form1.txtNetCost.Alignment(0)
+Gui.Form1.txtNetCost.FontName("Arial")
+Gui.Form1.txtNetCost.FontSize(8)
+Gui.Form1.txtNetCost.Backcolor(-2147483643)
+Gui.Form1.txtNetCost.BorderStyle(1)
+Gui.Form1.txtNetCost.MaxLength(9)
+Gui.Form1.txtNetCost.TabStop(True)
+Gui.Form1.txtNetCost.TabIndex(9)
+Gui.Form1.txtNetCost.Tooltip("")
+Gui.Form1.txtNetCost.ControlGroup(0)
+Gui.Form1.txtNetCost.DefaultValue("")
+
+
+Gui.Form1.lbl5.Create(label)
+Gui.Form1.lbl5.Caption("Net Cost")
+Gui.Form1.lbl5.Visible(True)
+Gui.Form1.lbl5.Size(1425,255)
+Gui.Form1.lbl5.Zorder(0)
+Gui.Form1.lbl5.Position(5460,20)
+Gui.Form1.lbl5.Enabled(True)
+Gui.Form1.lbl5.Alignment(0)
+Gui.Form1.lbl5.FontName("Arial")
+Gui.Form1.lbl5.FontSize(8)
+Gui.Form1.lbl5.Backcolor(-2147483633)
+Gui.Form1.lbl5.BackStyle(0)
+Gui.Form1.lbl5.Tooltip("")
+Gui.Form1.lbl5.ControlGroup(0)
+Gui.Form1.lbl5.DefaultValue("")
+
+
+Gui.Form1.txtCountry.Create(textbox)
+Gui.Form1.txtCountry.Text("")
+Gui.Form1.txtCountry.Visible(True)
+Gui.Form1.txtCountry.Size(2355,300)
+Gui.Form1.txtCountry.Zorder(0)
+Gui.Form1.txtCountry.Position(65,800)
+Gui.Form1.txtCountry.Enabled(True)
+Gui.Form1.txtCountry.Alignment(0)
+Gui.Form1.txtCountry.FontName("Arial")
+Gui.Form1.txtCountry.FontSize(8)
+Gui.Form1.txtCountry.Backcolor(-2147483643)
+Gui.Form1.txtCountry.BorderStyle(1)
+Gui.Form1.txtCountry.MaxLength(10)
+Gui.Form1.txtCountry.TabStop(True)
+Gui.Form1.txtCountry.TabIndex(11)
+Gui.Form1.txtCountry.Tooltip("")
+Gui.Form1.txtCountry.ControlGroup(0)
+Gui.Form1.txtCountry.DefaultValue("")
+
+
+Gui.Form1.lbl6.Create(label)
+Gui.Form1.lbl6.Caption("Country of Origin")
+Gui.Form1.lbl6.Visible(True)
+Gui.Form1.lbl6.Size(1935,255)
+Gui.Form1.lbl6.Zorder(0)
+Gui.Form1.lbl6.Position(65,605)
+Gui.Form1.lbl6.Enabled(True)
+Gui.Form1.lbl6.Alignment(0)
+Gui.Form1.lbl6.FontName("Arial")
+Gui.Form1.lbl6.FontSize(8)
+Gui.Form1.lbl6.Backcolor(-2147483633)
+Gui.Form1.lbl6.BackStyle(0)
+Gui.Form1.lbl6.Tooltip("")
+Gui.Form1.lbl6.ControlGroup(0)
+Gui.Form1.lbl6.DefaultValue("")
+
+
+Gui.Form1.mltxtDesc.Create(textboxm)
+Gui.Form1.mltxtDesc.Visible(True)
+Gui.Form1.mltxtDesc.Size(5415,540)
+Gui.Form1.mltxtDesc.Zorder(0)
+Gui.Form1.mltxtDesc.Position(65,1335)
+Gui.Form1.mltxtDesc.Enabled(True)
+Gui.Form1.mltxtDesc.Alignment(0)
+Gui.Form1.mltxtDesc.FontName("Arial")
+Gui.Form1.mltxtDesc.FontSize(8)
+Gui.Form1.mltxtDesc.Backcolor(-2147483643)
+Gui.Form1.mltxtDesc.BorderStyle(1)
+Gui.Form1.mltxtDesc.MaxLength(100)
+Gui.Form1.mltxtDesc.NumericOnly(0)
+Gui.Form1.mltxtDesc.TabStop(True)
+Gui.Form1.mltxtDesc.TabIndex(13)
+Gui.Form1.mltxtDesc.Text("")
+Gui.Form1.mltxtDesc.Tooltip("")
+Gui.Form1.mltxtDesc.ControlGroup(0)
+Gui.Form1.mltxtDesc.DefaultValue("")
+
+
+Gui.Form1.lbl7.Create(label)
+Gui.Form1.lbl7.Caption("Description")
+Gui.Form1.lbl7.Visible(True)
+Gui.Form1.lbl7.Size(1245,255)
+Gui.Form1.lbl7.Zorder(0)
+Gui.Form1.lbl7.Position(65,1130)
+Gui.Form1.lbl7.Enabled(True)
+Gui.Form1.lbl7.Alignment(0)
+Gui.Form1.lbl7.FontName("Arial")
+Gui.Form1.lbl7.FontSize(8)
+Gui.Form1.lbl7.Backcolor(-2147483633)
+Gui.Form1.lbl7.BackStyle(0)
+Gui.Form1.lbl7.Tooltip("")
+Gui.Form1.lbl7.ControlGroup(0)
+Gui.Form1.lbl7.DefaultValue("")
+
+
+Gui.Form1.cmdSave.Create(button)
+Gui.Form1.cmdSave.Caption("Save")
+Gui.Form1.cmdSave.Visible(True)
+Gui.Form1.cmdSave.Size(880,375)
+Gui.Form1.cmdSave.Zorder(0)
+Gui.Form1.cmdSave.Position(75,2000)
+Gui.Form1.cmdSave.Enabled(True)
+Gui.Form1.cmdSave.FontName("Arial")
+Gui.Form1.cmdSave.FontSize(8)
+Gui.Form1.cmdSave.TabStop(True)
+Gui.Form1.cmdSave.TabIndex(15)
+Gui.Form1.cmdSave.Tooltip("")
+Gui.Form1.cmdSave.ControlGroup(0)
+Gui.Form1.cmdSave.DefaultValue("")
+
+Gui.Form1.cmdSave.Event(click,cmdsave_click)
+
+gui.Form1..minx(0)
+gui.Form1..miny(0)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.UDT.uCompany.Define("TERMINAL",STRING,"")
+V.UDT.uCompany.Define("NAME_COMPANY",STRING,"NAME_COMPANY")
+V.UDT.uCompany.Define("ADDRESS1",STRING,"ADDRESS1")
+V.UDT.uCompany.Define("ADDRESS2",STRING,"ADDRESS2")
+V.UDT.uCompany.Define("CITY",STRING,"CITY")
+V.UDT.uCompany.Define("STATE","STRING","STATE")
+V.UDT.uCompany.Define("CODE_ZIP",STRING,"CODE_ZIP")
+V.UDT.uCompany.Define("COUNTRY",STRING,"COUNTRY")
+V.uGlobal.uCompany.Declare("uCompany")
+
+V.UDT.uCust.Define("CUSTOMER_NAME",STRING,"CUSTOMER_NAME")
+V.UDT.uCust.Define("TERMINAL",STRING,"")
+V.UDT.uCust.Define("ADDRESS1",STRING,"ADDRESS1")
+V.UDT.uCust.Define("ADDRESS2",STRING,"ADDRESS2")
+V.UDT.uCust.Define("ADDRESS3",STRING,"ADDRESS3")
+V.UDT.uCust.Define("ADDRESS4",STRING,"ADDRESS4")
+V.UDT.uCust.Define("ADDRESS5",STRING,"")
+V.UDT.uCust.Define("CITY",STRING,"CITY")
+V.UDT.uCust.Define("STATE","STRING","STATE")
+V.UDT.uCust.Define("CODE_ZIP",STRING,"ZIP")
+V.UDT.uCust.Define("COUNTRY",STRING,"COUNTRY")
+V.uGlobal.uCust.Declare("uCust")
+
+V.UDT.uProdLine.Define("TERMINAL",STRING,"")
+V.UDT.uProdLine.Define("PRODUCT_LINE",STRING,"PRODUCT_LINE")
+V.UDT.uProdLine.Define("DESCRIPTION",STRING,"DESCRIPTION")
+V.UDT.uProdLine.Define("TARIFF_CODE",STRING,"TARIFF_CODE")
+V.UDT.uProdLine.Define("PREF_CRIT",STRING,"PREF_CRIT")
+V.UDT.uProdLine.Define("PRODUCER",STRING,"PRODUCER")
+V.UDT.uProdLine.Define("NET_COST",FLOAT,"NET_COST")
+V.UDT.uProdLine.Define("COUNTRY_OO",STRING,"COUNTRY")
+V.uGlobal.uProdLine.Declare("uProdLine")
+
+'Loaded directly to print table
+V.UDT.uNaftaRPT.Define("TERMINAL",STRING,"")
+V.UDT.uNaftaRPT.Define("NAME_COMPANY",STRING,"")
+V.UDT.uNaftaRPT.Define("ADDRESS1",STRING,"")
+V.UDT.uNaftaRPT.Define("ADDRESS2",STRING,"")
+V.UDT.uNaftaRPT.Define("ADDRESS3",STRING,"")
+V.UDT.uNaftaRPT.Define("ADDRESS4",STRING,"")
+V.UDT.uNaftaRPT.Define("ADDRESS5",STRING,"")
+V.UDT.uNaftaRPT.Define("CITY",STRING,"")
+V.UDT.uNaftaRPT.Define("STATE","STRING","")
+V.UDT.uNaftaRPT.Define("CODE_ZIP",STRING,"")
+V.UDT.uNaftaRPT.Define("COUNTRY",STRING,"COUNTRY")
+V.UDT.uNaftaRPT.Define("CUSTOMER_NAME",STRING,"")
+V.UDT.uNaftaRPT.Define("C_ADDRESS1",STRING,"")
+V.UDT.uNaftaRPT.Define("C_ADDRESS2",STRING,"")
+V.UDT.uNaftaRPT.Define("C_CITY",STRING,"")
+V.UDT.uNaftaRPT.Define("C_STATE","STRING","")
+V.UDT.uNaftaRPT.Define("C_CODE_ZIP",STRING,"")
+V.UDT.uNaftaRPT.Define("C_COUNTRY",STRING,"")
+V.UDT.uNaftaRPT.Define("PRODUCT_LINE",STRING,"PRODUCT_LINE")
+V.UDT.uNaftaRPT.Define("DESCRIPTION",STRING,"DESCRIPTION")
+V.UDT.uNaftaRPT.Define("TARIFF_CODE",STRING,"TARIFF_CODE")
+V.UDT.uNaftaRPT.Define("PREF_CRIT",STRING,"PREF_CRIT")
+V.UDT.uNaftaRPT.Define("PRODUCER",STRING,"PRODUCER")
+V.UDT.uNaftaRPT.Define("NET_COST",FLOAT,"NET_COST")
+V.UDT.uNaftaRPT.Define("COUNTRY_OO",STRING,"COUNTRY")
+
+V.uGlobal.uNaftaRPT.Declare("uNaftaRPT")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Coded by AGM
+'Quote 6376 NAFTA CERTIFICATE OF ORIGIN
+'Product line Maintenance program and NAFTA Certificate preprocessor
+'2/26/2015
+
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,16090)
+	F.Intrinsic.Control.If(V.Passed.CALLING-PGM,=,"ORD0LZBI")
+	F.Intrinsic.Control.AndIf(V.Passed.BIP_REPORTID,=,"000051")
+
+		F.Intrinsic.UI.Msgbox("Would you like to print NAFTA Certificate?","Print NAFTA Certificate?",3,V.Local.sRet)
+		F.Intrinsic.Control.SelectCase(V.Local.sRet)
+			'2 = Cancel
+			F.Intrinsic.Control.Case(2)
+				F.Intrinsic.Control.End
+			'7 = No
+			F.Intrinsic.Control.Case(7)
+				F.Intrinsic.Control.End
+			'6 = YES
+			F.Intrinsic.Control.Case(6)
+				F.Intrinsic.Control.Callsub(Loadrst)
+				F.intrinsic.Control.Callsub(Print)
+			F.Intrinsic.Control.CaseElse
+				F.Intrinsic.Control.End
+		F.Intrinsic.Control.EndSelect
+
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndIf
+'Else launch maint program
+F.Intrinsic.Control.Else
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		Gui.Form1.txtNetCost.NumericOnly(1)
+		Gui.Form1..Show
+F.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+Program.Sub.LoadRst.Start
+'Gathers data to print onto custom report
+V.Local.sSQL.Declare(String)
+V.Local.sSQL2.Declare(String)
+V.Local.sSQL3.Declare(String)
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+V.uGlobal.uCompany.Redim(-1,-1)
+V.uGlobal.uCust.Redim(-1,-1)
+V.uGlobal.uProdLine.Redim(-1,-1)
+
+'Getting company info 
+F.ODBC.Connection!conx.OpenRecordsetRO("rst","SELECT NAME_COMPANY, ADDRESS1, ADDRESS2, CITY, STATE, CODE_ZIP, COUNTRY from V_COMPANY WHERE RESV = '1' AND REC = '1'")
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","V.uGlobal.uCompany",True,0)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.CallSub(form1_unload)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+'Loading Customer info 
+F.Intrinsic.String.Build("SELECT CUSTOMER_NAME, ADDRESS1, ADDRESS2, ADDRESS3, ADDRESS4, CITY, STATE, ZIP, COUNTRY FROM V_BI_PACKING_LIST WHERE TERMINAL = '{0}' AND RPTID = '000051' AND LINE_TYPE = 'H'",V.Caller.Terminal,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","V.uGlobal.uCust",True,0)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+'Loading Line Data
+F.Intrinsic.String.Build("SELECT ORDER_NO, RECORD_NO from BI_PACKING_LIST WHERE TERMINAL = '{0}' AND RPTID = '000051' AND LINE_TYPE = 'L' ORDER BY ORDER_NO, RECORD_NO",V.Caller.Terminal,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+
+	F.Intrinsic.Control.DoUntil(V.ODBC.conx!rst.EOF,=,True)
+		F.Intrinsic.String.Build("SELECT PRODUCT_LINE From V_ORDER_LINES WHERE ORDER_NO = '{0}' AND RECORD_NO = '{1}'",V.ODBC.conx!rst.FieldValTrim!ORDER_NO,V.ODBC.conx!rst.FieldValTrim!RECORD_NO,V.Local.sSQL2)
+		F.ODBC.Connection!conx.OpenRecordsetRO("rst2",V.Local.sSQL2)
+		F.Intrinsic.Control.If(V.ODBC.conx!rst2.EOF,=,False)
+			F.Intrinsic.String.Build("SELECT * FROM GCG_NAFTA_MAINT WHERE PRODUCT_LINE = '{0}'",V.ODBC.conx!rst2.FieldValTrim!PRODUCT_LINE,V.Local.sSQL3)
+			F.ODBC.Connection!conx.OpenRecordsetRO("rst3",V.Local.sSQL3)
+			F.Intrinsic.Control.If(V.ODBC.conx!rst3.EOF,=,False)
+				F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst3","V.uGlobal.uNaftaRPT",True,1900)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.conx!rst3.Close
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rst2.Close
+	F.ODBC.conx!rst.MoveNext
+	F.Intrinsic.Control.Loop
+
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+'Deletes previous records from printing table
+F.Intrinsic.String.Build("SELECT * FROM GCG_NAFTA_CERT_ORG WHERE TERMINAL = '{0}'",V.Caller.Terminal,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+	F.Intrinsic.String.Build("DELETE FROM GCG_NAFTA_CERT_ORG WHERE TERMINAL = '{0}'",V.Caller.Terminal,V.Local.sSQL)
+	F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+F.Intrinsic.Control.If(V.uGlobal.uCompany,<>,-1)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!NAME_COMPANY,V.uGlobal.uCompany!NAME_COMPANY)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!ADDRESS1,V.uGlobal.uCompany!ADDRESS1)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!ADDRESS2,V.uGlobal.uCompany!ADDRESS2)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!CITY,V.uGlobal.uCompany!CITY)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!STATE,V.uGlobal.uCompany!STATE)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!CODE_ZIP,V.uGlobal.uCompany!CODE_ZIP)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!COUNTRY,V.uGlobal.uCompany!COUNTRY)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.uGlobal.uCust,<>,-1)
+
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!CUSTOMER_NAME,V.uGlobal.uCust!CUSTOMER_NAME)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!C_ADDRESS1,V.uGlobal.uCust!ADDRESS1)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!C_ADDRESS2,V.uGlobal.uCust!ADDRESS2)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!ADDRESS3,V.uGlobal.uCust!ADDRESS3)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!ADDRESS4,V.uGlobal.uCust!ADDRESS4)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!C_CITY,V.uGlobal.uCust!CITY)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!C_STATE,V.uGlobal.uCust!STATE)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!C_CODE_ZIP,V.uGlobal.uCust!CODE_ZIP)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!C_COUNTRY,V.uGlobal.uCust!COUNTRY)
+F.Intrinsic.Control.EndIf
+
+'Loading report to table
+F.Intrinsic.Control.If(V.uGlobal.uNaftaRPT.UBound,<>,-1)
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uNaftaRPT!TERMINAL,V.Caller.Terminal)
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!TERMINAL,"TERMINAL")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!NAME_COMPANY,"NAME_COMPANY")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!ADDRESS1,"ADDRESS1")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!ADDRESS2,"ADDRESS2")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!ADDRESS3,"ADDRESS3")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!ADDRESS4,"ADDRESS4")
+	'F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!ADDRESS5,"ADDRESS5")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!CITY,"CITY")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!STATE,"STATE")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!CODE_ZIP,"CODE_ZIP")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!COUNTRY,"COUNTRY")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!CUSTOMER_NAME,"CUSTOMER_NAME")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!C_ADDRESS1,"C_ADDRESS1")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!C_ADDRESS2,"C_ADDRESS2")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!C_CITY,"C_CITY")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!C_STATE,"C_STATE")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!C_COUNTRY,"C_COUNTRY")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uNaftaRPT!COUNTRY_OO,"COUNTRY_OO")
+
+	F.ODBC.Connection!conx.OpenRecordsetRW("rst","GCG_NAFTA_CERT_ORG")
+	F.Intrinsic.Variable.SaveUDTToRecordSet("conx","rst","V.uGlobal.uNaftaRPT")
+	F.ODBC.conx!rst.Close
+F.Intrinsic.Control.EndIf
+
+Program.Sub.LoadRst.End
+
+Program.Sub.Print.Start
+'Handels actual printing
+
+V.Local.sRptName.Declare(String)
+V.Local.sParam.Declare(String)
+V.Local.sParamVal.Declare(String)
+V.Local.iRpt.Declare(Long)
+
+V.Local.sParam.Set("Terminal")
+V.Local.sParamVal.Set(V.Caller.Terminal)
+
+F.Intrinsic.String.Build("{0}\CUSTOM\GCG_NAFTA_CERT_ORG.rpt",V.Caller.BusintDir,V.Local.sRptName)
+F.Global.BI.InitializeReport("NAFTA CERT",V.Local.sRptName,V.Local.iRpt)
+F.Global.BI.PrintReport(V.Local.iRpt,0,V.Local.sParam,V.Local.sParamVal,"",False)
+
+Program.Sub.Print.End
+
+program.sub.form1_unload.start
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+program.sub.form1_unload.end
+
+program.sub.cmdpl_click.start
+V.Local.sRet.Declare(String)
+V.Local.sSQL.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser(130,"",V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.Form1.txtPL.Text(V.Local.sRet.Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+F.Intrinsic.Control.AndIf(V.Local.sRet,<>,"")
+	'Query the product line selected in sRet and pull in whatever info saved in GCG Maint table
+	F.Intrinsic.String.Build("SELECT * FROM GCG_NAFTA_MAINT WHERE PRODUCT_LINE = '{0}'",V.Local.sRet,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+		'load records found for PL
+		Gui.Form1.txtTC.Text(V.ODBC.conx!rst.FieldValTrim!TARIFF_CODE)
+		Gui.Form1.txtPrefCrit.Text(V.ODBC.conx!rst.FieldValTrim!PREF_CRIT)
+		Gui.Form1.txtProducer.Text(V.ODBC.conx!rst.FieldValTrim!PRODUCER)
+		Gui.Form1.txtNetCost.Text(V.ODBC.conx!rst.FieldValTrim!NET_COST)
+		Gui.Form1.txtCountry.Text(V.ODBC.conx!rst.FieldValTrim!COUNTRY)
+		Gui.Form1.mltxtDesc.Text(V.ODBC.conx!rst.FieldValTrim!DESCRIPTION)
+	F.Intrinsic.Control.Else
+		'Clear screen since no records were found for product line
+		Gui.Form1.txtTC.Text("")
+		Gui.Form1.txtPrefCrit.Text("")
+		Gui.Form1.txtProducer.Text("")
+		Gui.Form1.txtNetCost.Text("")
+		Gui.Form1.txtCountry.Text("")
+		Gui.Form1.mltxtDesc.Text("")
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rst.Close
+F.Intrinsic.Control.EndIf
+program.sub.cmdpl_click.end
+
+program.sub.cmdsave_click.start
+V.Local.sSQL.Declare(String)
+V.Local.sMsg.Declare(String)
+F.Intrinsic.Control.If(V.Screen.Form1!txtPL.Text,<>,"")
+
+	'If records exist, delete them so no duplicates will be made
+	F.Intrinsic.String.Build("SELECT * FROM GCG_NAFTA_MAINT WHERE PRODUCT_LINE = '{0}'",V.Screen.Form1!txtPL.Text,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRW("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+		F.Intrinsic.String.Build("DELETE FROM GCG_NAFTA_MAINT WHERE PRODUCT_LINE = '{0}'",V.Screen.Form1!txtPL.Text,V.Local.sSQL)
+		F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rst.Close
+
+	F.Intrinsic.Control.If(V.Screen.Form1!txtNetCost.Text,=,"")
+		Gui.Form1.txtNetCost.Text(0)
+	F.Intrinsic.Control.EndIf
+
+	'Saving records to custom table
+	F.ODBC.Connection!conx.OpenRecordsetRW("rst","SELECT * FROM GCG_NAFTA_MAINT")
+	F.ODBC.conx!rst.AddNew
+	F.ODBC.conx!rst.Set!PRODUCT_LINE(V.Screen.Form1!txtPL.Text)
+	F.ODBC.conx!rst.Set!DESCRIPTION(V.Screen.Form1!mltxtDesc.Text)
+	F.ODBC.conx!rst.Set!TARIFF_CODE(V.Screen.Form1!txtTC.Text)
+	F.ODBC.conx!rst.Set!PREF_CRIT(V.Screen.Form1!txtPrefCrit.Text)
+	F.ODBC.conx!rst.Set!PRODUCER(V.Screen.Form1!txtProducer.Text)
+	F.ODBC.conx!rst.Set!NET_COST(V.Screen.Form1!txtNetCost.Text)
+	F.ODBC.conx!rst.Set!COUNTRY(V.Screen.Form1!txtCountry.Text)
+	F.ODBC.conx!rst.Update
+	F.ODBC.conx!rst.Close
+
+	F.Intrinsic.String.Build("Information successfully saved for product line {0}",V.Screen.Form1!txtPL.Text,V.Local.sMsg)
+	F.Intrinsic.UI.Msgbox(V.Local.sMsg,"Save Successful")
+	F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Please select a product line to enter information against","Unable to Save")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+program.sub.cmdsave_click.end
+
+Program.Sub.Comments.Start
+${$0$}$NewScript$}$AGM$}$2/26/2015
+Program.Sub.Comments.End
